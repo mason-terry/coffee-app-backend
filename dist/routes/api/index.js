@@ -1,5 +1,7 @@
-const apiRouter = require('express').Router();
+const indexRouter = require('express').Router();
 const userRoutes = require('./userRoutes');
-apiRouter.use('/users', userRoutes);
-module.exports = apiRouter;
+const apiRoutes = require('./apiRoutes');
+indexRouter.use('/', apiRoutes);
+indexRouter.use('/users', userRoutes);
+module.exports = indexRouter;
 //# sourceMappingURL=index.js.map
