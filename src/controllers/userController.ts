@@ -1,11 +1,5 @@
 const { UserModel } = require('../models')
 
-export const fetchUsers = async (req, res) => {
-  const users = await UserModel.find({})
-
-  res.status(200).send(users)
-}
-
 export const addUser = async (req, res) => {
   const name = req.body.name
   const email = req.body.email
