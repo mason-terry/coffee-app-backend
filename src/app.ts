@@ -13,7 +13,7 @@ app.use(cors());
 
 // MongDB setup
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/coffee-review', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/coffee-power', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection Error!'));
 db.once('open', () => console.log('Connection Succeeded!'));
