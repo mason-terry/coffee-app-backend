@@ -41,7 +41,7 @@ export const login = async (req, res) => {
 
     if (validPassword) {
       const userToken = await token.getToken(user)
-      res.status(200).send({ success: true, message: 'Here is the user you are looking for', user, token: userToken })
+      res.status(200).send({ success: true, message: 'Here is the user you are looking for.', user, token: userToken })
     } else {
       res.status(200).send({
         success: false,
@@ -49,6 +49,6 @@ export const login = async (req, res) => {
       })
     }
   } else {
-   res.status(200).send({ success: false, message: 'We were not able to find that user' })
+   res.status(200).send({ success: false, message: 'We were not able to find that user.' })
   }
 }
